@@ -15,13 +15,7 @@ This Terraform module creates and manages Azure APP service with SQL PaaS resour
 - Private Link
 - Private DNS Zone
 
-## 2. Version Compatibility
-
-| Module version | Terraform version | AzureRM version | Services       |
-| -------------- | ----------------- | --------------- | -------------- |
-| v1.4.2         | 0.13.2            | 2.61.0          | Azure SQL PaaS,
-
-## 3. Considerations
+## 2. Considerations
 
 ### Module
 
@@ -32,7 +26,7 @@ This Terraform module creates and manages Azure APP service with SQL PaaS resour
 * Resource group module having the information of resource group.
 
 
-## 4. Dependencies
+## 3. Dependencies
 
 1. An Azure virtual network (VNet) with web app subnet ID to connect app service. 
 
@@ -42,9 +36,9 @@ This Terraform module creates and manages Azure APP service with SQL PaaS resour
 
 4. An Azure private DNS zone (Azure SQL) with VNet link for integrating private endpoint. 
 
-## 5. Usage
+## 4. Usage
 
-### 5.1 Resources Created
+### 4.1 Resources Created
 
 The number of resources created is dependent on user input for certain features.
 
@@ -58,7 +52,7 @@ The number of resources created is dependent on user input for certain features.
 - 4 Private Link
 - 4 Private DNS Zone link with Virtual network
 
-### 5.3 Create an Three-tier application
+### 4.2 Create an Three-tier application
 
 
   # General Inputs- APP service Plan
@@ -101,7 +95,7 @@ The number of resources created is dependent on user input for certain features.
 ```
 ```
 
-## 6. Inputs
+## 5. Inputs
 
 ### General
 
@@ -149,7 +143,7 @@ The number of resources created is dependent on user input for certain features.
 | subnet\_id | Subnet ID for Database and APP service within the virtual network. | `string` | n/a     | yes      |
 
 
-## 7. Outputs
+## 6. Outputs
 
 | Name                          | Description                                              |
 | ----------------------------- | -------------------------------------------------------- |
@@ -170,8 +164,8 @@ The number of resources created is dependent on user input for certain features.
 
 ```
 
-## 8. Integrations
+## 7. Integrations
 
-### 8.1 Private DNS Zone
+### 7.1 Private DNS Zone
 
 DNS A record must be created in Private DNS Zone (Azure SQL) to integrate private endpoint.
